@@ -7,7 +7,7 @@ public class VitalsLogic {
 	
 	public static List<Vital> l1 = new ArrayList<>();
 	
-	public static IReporter irep = ReporterFactory.getReporterInstance();
+	public static IReporter irep = new ReporterOne();
 	
 	public static boolean checkIfVitalFine(Vital vital) {
 		return (vital.getValue() > vital.getLowLimit() && vital.getValue() < vital.getHighLimit());
